@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/common.css">
+  <% if(subHeader==true){ %>
+    <link rel="stylesheet" href="css/sub_hf.css">
+    <% } else{ %>
+      <link rel="stylesheet" href="css/header.css">
+    
+    <% } %> 
+  <title>원주곤충마을박물관</title>
+
+</head>
+
+<body>
+  <!-- <div class="wrap"> -->
+  <header id="header" class="header">
+    <%- include('header') %>
+  </header>
+<nav>
+  <%- include('navTab') %> 
+</nav>
+  <main>
+    <%- body %>
+  </main>
+  <footer id="footer">
+    <%- include('footer') %>
+  </footer>
+  <!-- </div> -->
+</body>
+<!-- smooth-scrollbar -->
+<!-- <script src="js/smoothScroll.js"></script> -->
+<% if(category=='main'){ %>
+<style>
+  main {
+    background-color: #425F57;
+  }
+</style>
+<% } %>
+<script>
+  AOS.init();
+</script>
+
+</html>
